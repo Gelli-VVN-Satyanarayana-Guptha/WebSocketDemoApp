@@ -1,0 +1,37 @@
+class Trade {
+  final String e;
+  final int E;
+  final String s;
+  final int t;
+  final String p;
+  final String q;
+  final int T;
+  final bool m;
+  final bool M;
+
+  Trade({
+    required this.e,
+    required this.E,
+    required this.s,
+    required this.t,
+    required this.p,
+    required this.q,
+    required this.T,
+    required this.m,
+    required this.M,
+  });
+
+  factory Trade.fromJson(Map<String, dynamic> json) {
+    return Trade(
+      e: json['e'] as String,
+      E: json['E'] as int,
+      s: json['s'] as String,
+      t: json['t'] as int,
+      p: json['p'] as String,
+      q: json['q'] as String,
+      T: json['T'] as int,
+      m: json['m'] as bool,
+      M: json['M'] as bool,
+    );
+  }
+}
